@@ -13,6 +13,7 @@ gem 'devise'
 gem 'paperclip'
 gem 'rails_db'
 gem 'figaro'
+gem 'stripe'
 
 group :development, :test do
   gem 'byebug'
