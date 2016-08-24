@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
-  get "profiles/:id" => "profiles#show", as: :profile
+  root 'profiles#landing'
 
   devise_for :users
+
+  resources :buyers
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

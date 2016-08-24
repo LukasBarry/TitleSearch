@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe ProfilesController, type: :controller do
-  pending "GET #show" do
+  describe "GET #show" do
     let(:user) {FactoryGirl.create(:user)}
     it "returns http success" do
       get :show, id: user

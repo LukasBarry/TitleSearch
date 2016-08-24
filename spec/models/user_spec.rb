@@ -7,4 +7,10 @@ RSpec.describe User, type: :model do
     expect(user).to be_invalid
     end
   end
+  describe 'email' do
+    it "can't be nil" do
+      user = FactoryGirl.build(:user, email: nil)
+    expect(user).to be_invalid
+    end
+  end
 end
