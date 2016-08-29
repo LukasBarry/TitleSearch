@@ -1,16 +1,59 @@
 <h2>Sign up</h2>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
 
-  <div class="form-inputs">
-    <%= f.input :email, required: true, autofocus: true %>
-    <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
-    <%= f.input :password_confirmation, required: true %>
+  <div class="form-group">
+    <%= f.text_field :name, autofocus: true, class: "form-control", placeholder: "First & Last Name"  %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
+  <div class="form-group">
+    <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Email" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.text_field :company, class: "form-control", placeholder: "Company Name"  %>
+  </div>
+
+  <div class="form-group">
+    <%= f.telephone_field :phone, class:"form-control", placeholder: "Phone Number"  %>
+  </div>
+
+  <div class="form-group">
+    <%= f.telephone_field :fax, class: "form-control", placeholder: "Fax Number" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.text_field :street_address, class: "form-control", placeholder: "Address" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.text_field :city, class: "form-control", placeholder: "City" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.text_field :state, class: "form-control", placeholder: "State"%>
+  </div>
+
+  <div class="form-group">
+    <%= f.number_field :zip, class: "form-control", placeholder: "Zip" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
   </div>
 <% end %>
 
