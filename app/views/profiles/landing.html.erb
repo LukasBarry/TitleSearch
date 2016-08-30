@@ -1,4 +1,8 @@
-<h1>Landing Page</h1>
+<h1>TitleSearch, Inc.</h1>
 
-<%= link_to "Sign Out", destroy_user_session_path, class: "btn btn-default" %>
-<%= link_to "Edit Profile", edit_user_registration_path, class: "btn btn-default" %>
+<p>Welcome to TitleSearch Inc., your automated Title Search Resource. We strive to provide the most accurate information available, pulling directly from the County's open source records every day. Our algorithm pulls and changes all new and edited records from the Revenue Department and the Register of Deeds. Our easy to use forms make it even simpler to input your buyer's information and be able to immediately view all of the relevant information, then check some boxes and boom, sent to the Title Company. Now it's just that easy to get your title insurance. Who needs paralegals anyways, amiright??</p>
+
+<%= link_to "Sign In", new_user_session_path, class: "btn btn-default" %>
+<%= link_to "Sign Up", new_user_registration_path, class: "btn btn-default" %>
+
+<%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "btn btn-default" %>
