@@ -1,28 +1,19 @@
-== README
+TitleSearch NC
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app was created for North Carolina attorneys to do title searches in one third the time with a much easier to use format. TitleSearch allows the attorney to input their client information in an online form and submit it, at which point the app will search the open data sources of the county and return all of the public information, including the tax records and any open deeds of trust on record with the county.
 
-Things you may want to cover:
+Once the attorney has reviewed the information returned by the database, they will be able to choose what title company they would like their preliminary title opinion sent to, hit submit again, and it will be sent directly over, saving both time and money.
 
-* Ruby version
+To begin use on this app, fork the repository, clone it, then:
 
-* System dependencies
+run <tt>bundle install</tt>
 
-* Configuration
+and because this uses a postgreSQL database, please run
 
-* Database creation
+<tt>rake db:create</tt>
 
-* Database initialization
+Now you will be able to start your rails server and run the app from your localhost.
 
-* How to run the test suite
+More information will be provided once the app is released for Beta testing.
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Thanks!
