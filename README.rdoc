@@ -17,3 +17,5 @@ Now you will be able to start your rails server and run the app from your localh
 More information will be provided once the app is released for Beta testing.
 
 Thanks!
+
+**This app is currently being built, so it will not work at the moment. Please bear with me.
