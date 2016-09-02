@@ -1,0 +1,56 @@
+<%= form_for @buyer do |f| %>
+  <div class="form-group">
+    <%= f.text_field :current_owner, class: "form-control", placeholder: "Current Owner" %>
+  </div>
+  <div class="form-group">
+    <%= f.text_field :borrower, class: "form-control", placeholder: "Borrower" %>
+  </div>
+  <div class="form-group">
+    <%= f.number_field :property_address_number, class: "form-control", placeholder: "ex. 1234" %>
+  </div>
+  <div class="form-group">
+    <%= f.text_field :property_address_street, class: "form-control", placeholder: "ex. Main" %>
+  </div>
+  <div class="form-group">
+    <%= f.text_field :property_address_type, class: "form-control", placeholder: "ex. Dr." %>
+  </div>
+  <div class="form-group">
+    <%= f.text_field :property_address_city, class: "form-control", placeholder: "City" %>
+  </div>
+  <div class="form-group">
+    <%= f.text_field :property_address_state, class: "form-control", placeholder: "State" %>
+  </div>
+  <div class="form-group">
+    <%= f.number_field :property_address_zip, class: "form-control", placeholder: "Zip Code" %>
+  </div>
+  <div class="form-group">
+    <%= f.text_field :county, class: "form-control", placeholder: "County" %>
+  </div>
+  <div class="form-group">
+    <%= f.number_field :purchase_price, class: "form-control", placeholder: "Purchase Price" %>
+  </div>
+  <div class="form-group">
+    <%= f.number_field :owners_coverage_amount, class: "form-control", placeholder: "Owner's Coverage Amount" %>
+  </div>
+  <div class="form-group">
+    <%= f.text_field :type_owners_policy_requested, class: "form-control", placeholder: "Type of Owner's Policy Requested" %>
+  </div>
+  <div class="form-group">
+    <%= f.text_field :type_of_title, class: "form-control", placeholder: "Type of Title" %>
+  </div>
+  <div class="form-group">
+
+  </div>
+  <div class="form-group">
+
+  </div>
+  <div class="form-group">
+
+  </div>
+  <div class="form-group">
+
+  </div>
+  <div class="form-group">
+
+  </div>
+<% end %>
