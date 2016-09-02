@@ -655,9 +655,12 @@
         null,
         1,
         1,
+        null,
         1,
         null,
         1,
+        0,
+        null,
         null,
         1,
         0,
@@ -686,8 +689,9 @@
       "/Users/LukasBarry/Desktop/TTS/rails/titlesearch/app/controllers/profiles_controller.rb": [
         1,
         null,
+        null,
         1,
-        0,
+        2,
         null,
         null,
         1,
@@ -789,6 +793,6 @@
         null
       ]
     },
-    "timestamp": 1472493402
+    "timestamp": 1472842856
   }
 }
