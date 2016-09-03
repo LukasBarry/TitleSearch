@@ -1,0 +1,24 @@
+<h1>Preliminary Report on Title</h1>
+
+<ul class="list-group">
+  <h4>
+    <li class="list-group-item"><strong>Current Owner: </strong><%= @buyer.current_owner %></li>
+    <li class="list-group-item"><strong>Borrower: </strong><%= @buyer.borrower %></li>
+    <li class="list-group-item"><strong>Address: </strong><%= @buyer.property_address_number %> <%= @buyer.property_address_street %> <%= @buyer.property_address_type %>, <%= @buyer.property_address_city %>, <%= @buyer.property_address_state %> <%= @buyer.property_address_zip %></li>
+    <li class="list-group-item"><strong>County: </strong><%= @buyer.county %></li>
+    <li class="list-group-item"><strong>Purchase Price: $</strong><%= @buyer.purchase_price %></li>
+    <li class="list-group-item"><strong>Owner's Coverage Amount: $</strong><%= @buyer.owners_coverage_amount %></li>
+    <li class="list-group-item"><strong>Type of Owner's Policy Requested: </strong><%= @buyer.type_owners_policy_requested %></li>
+    <li class="list-group-item"><strong>Type of Title: </strong><%= @buyer.type_of_title %></li>
+    <li class="list-group-item"><strong>Lender Name: </strong><%= @buyer.lender_name %></li>
+    <li class="list-group-item"><strong>Type of Loan: </strong><%= @buyer.type_of_loan %></li>
+    <li class="list-group-item"><strong>Loan Number: </strong><%= @buyer.loan_number %></li>
+    <li class="list-group-item"><strong>Loan Amount: $</strong><%= @buyer.loan_amount %></li>
+    <li class="list-group-item"><strong>Variable Loan Coverage: $</strong><%= @buyer.variable_loan_coverage %></li>
+    <li class="list-group-item"><strong>Type of Loan Policy: </strong><%= @buyer.type_of_loan_policy %></li>
+    <li class="list-group-item"><strong>ICL Requested: </strong><%= @buyer.icl_requested %></li>
+    <li class="list-group-item"><strong>ALTA Endorsements Requested: </strong><%= @buyer.alta_endorsement %></li>
+  </h4>
+</ul>
+
+<%= link_to "Profile", profile_path(current_user), class: "btn btn-primary" %>
