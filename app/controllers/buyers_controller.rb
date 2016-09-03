@@ -40,7 +40,7 @@ class BuyersController < ApplicationController
   private
 
   def buyer_params
-    params.require(:buyer).permit(:current_owner, :borrower, :property_address_number, :property_address_street, :property_address_type, :property_address_city, :property_address_state, :property_address_zip, :county, :purchase_price, :owners_coverage_amount, :type_owners_policy_requested, :type_of_title, :lender_name, :type_of_loan, :loan_number, :loan_amount, :variable_loan_coverage, :type_of_loan_policy, :icl_requested, :alta_endorsement)
+    params.require(:buyer).permit(:current_owner, :borrower, :property_address_number, :property_address_street, :property_address_type, :property_address_city, :property_address_state, :property_address_zip, :county, :purchase_price, :owners_coverage_amount, :type_owners_policy_requested, :type_of_title, :lender_name, :type_of_loan, :loan_number, :loan_amount, :variable_loan_coverage, :type_of_loan_policy, :icl_requested, :alta_endorsement, :user_id)
   end
 
 end
