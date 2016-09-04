@@ -1,0 +1,51 @@
+<%= form_for @title_report do |f| %>
+  <div class="form-group">
+    <%= f.label :taxes_paid, "Taxes Paid Through:" %>
+    <%= f.number_field :taxes_paid, class: "form-control", placeholder: "ex. 2016" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :special_levies, "Special Levies now due and payable:" %>
+    <%= f.text_field :special_levies, class: "form-control", placeholder: "List Special Levies" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :restrictive_covenants, "Are there Restrictive Covenants and Conditions?" %>
+    <%= f.select :restrictive_covenants, options_for_select(["Yes", "No"]), {}, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :covenant_book, "Covenant Book: " %>
+    <%= f.number_field :covenant_book, class: "form-control", placeholder: "Book Number" %>
+  </div>
+  <div class="form-group">
+
+  </div>
+  <div class="form-group">
+
+  </div>
+  <div class="form-group">
+
+  </div>
+  <div class="form-group">
+
+  </div>
+  <div class="form-group">
+
+  </div>
+  <div class="form-group">
+
+  </div>
+  <div class="form-group">
+
+  </div>
+  <div class="form-group">
+
+  </div>
+  <div class="form-group">
+
+  </div>
+  <div class="form-group">
+
+  </div>
+  <div class="form-group">
+
+  </div>
+<% end %>
