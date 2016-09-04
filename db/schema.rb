@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160904000506) do
+ActiveRecord::Schema.define(version: 20160904145900) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,8 +61,12 @@ ActiveRecord::Schema.define(version: 20160904000506) do
     t.string   "mechanics_lien_agent"
     t.string   "survey_required"
     t.string   "use_of_property"
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.string   "restrictions_violated_explain"
+    t.string   "right_of_way_explain"
+    t.string   "mechanics_lien_agent_name"
+    t.string   "use_of_property_explain"
   end
 
   create_table "users", force: :cascade do |t|
