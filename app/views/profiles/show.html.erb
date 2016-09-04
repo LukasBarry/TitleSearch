@@ -12,4 +12,8 @@
   </div>
 </h3>
 
-<p>Here we will need a button to start a new title search and a link to a list of all your previous title searches</p>
+<div class="col-md-9">
+  <% @user.buyers.each do |buyer| %>
+    <h3>Buyer: <%= link_to buyer.borrower, buyer_path(buyer) %> Seller: <%= buyer.current_owner %></h3><br />
+  <% end %>
+</div>

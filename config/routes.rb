@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'title_reports/show'
+
   root 'profiles#landing'
 
   devise_for :users

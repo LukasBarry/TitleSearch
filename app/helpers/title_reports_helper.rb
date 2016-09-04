@@ -1,0 +1,2 @@
+module TitleReportsHelper
+end

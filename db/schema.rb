@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160903192018) do
+ActiveRecord::Schema.define(version: 20160904000506) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,6 +44,26 @@ ActiveRecord::Schema.define(version: 20160903192018) do
   end
 
   add_index "buyers", ["user_id"], name: "index_buyers_on_user_id", using: :btree
+
+  create_table "title_reports", force: :cascade do |t|
+    t.integer  "taxes_paid"
+    t.string   "special_levies"
+    t.string   "restrictive_covenants"
+    t.integer  "covenant_book"
+    t.integer  "covenant_page"
+    t.string   "restrictions_violated"
+    t.string   "restrictions_forfeiture"
+    t.string   "right_of_way"
+    t.string   "prior_policy"
+    t.string   "manufactured_home"
+    t.string   "property_occupied_by"
+    t.string   "property_construction"
+    t.string   "mechanics_lien_agent"
+    t.string   "survey_required"
+    t.string   "use_of_property"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
