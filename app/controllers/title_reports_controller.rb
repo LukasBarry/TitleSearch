@@ -40,7 +40,7 @@ class TitleReportsController < ApplicationController
   private
 
   def title_report_params
-    params.require(:title_report).permit(:taxes_paid, :special_levies, :restrictive_covenants, :covenant_book, :covenant_page, :restrictions_violated, :restrictions_forfeiture, :right_of_way, :prior_policy, :manufactured_home, :property_occupied_by, :property_construction, :mechanics_lien_agent, :survey_required, :use_of_property)
+    params.require(:title_report).permit(:taxes_paid, :special_levies, :restrictive_covenants, :covenant_book, :covenant_page, :restrictions_violated, :restrictions_forfeiture, :right_of_way, :prior_policy, :manufactured_home, :property_occupied_by, :property_construction, :mechanics_lien_agent, :survey_required, :use_of_property, :buyer_id)
   end
 
 end

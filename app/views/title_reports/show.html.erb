@@ -1,2 +1,29 @@
-<h1>TitleReports#show</h1>
-<p>Find me in app/views/title_reports/show.html.erb</p>
+<h1>Preliminary Report on Title</h1>
+
+<ul class="list-group">
+  <h4>
+    <li class="list-group-item">Taxes paid through: <%= @title_report.taxes_paid %></li>
+    <li class="list-group-item">Special Levies now due and payable: <%= @title_report.special_levies %></li>
+    <li class="list-group-item">Are there restrictive covenants and conditions: <%= @title_report.restrictive_covenants %></li>
+    <li class="list-group-item">Restrictive Covenant Book: <%= @title_report.covenant_book %></li>
+    <li class="list-group-item">Restrictive Covenant Page: <%= @title_report.covenant_page %></li>
+    <li class="list-group-item">Are Restrictions violated: <%= @title_report.restrictions_violated %></li>
+    <li class="list-group-item">Explain any restrictions violated: <%= @title_report.restrictions_violated_explain %></li>
+    <li class="list-group-item">Do restrictions contain reversionary or forfeiture clauses: <%= @title_report.restrictions_forfeiture %></li>
+    <li class="list-group-item">Does land abut a publicly dedicated right of way: <%= @title_report.right_of_way %></li>
+    <li class="list-group-item">Listed Easements: <%= @title_report.right_of_way_explain %></li>
+    <li class="list-group-item">Updating from prior Title Policy: <%= @title_report.prior_policy %></li>
+    <li class="list-group-item">Is a manufactured home located on the property: <%= @title_report.manufactured_home %></li>
+    <li class="list-group-item">Property occupied by: <%= @title_report.property_occupied_by %></li>
+    <li class="list-group-item">Is there construction: <%= @title_report.property_construction %></li>
+    <li class="list-group-item">Has a Mechanics Lien Agent been appointed: <%= @title_report.mechanics_lien_agent %></li>
+    <li class="list-group-item">Mechanic Lien Agent's name: <%= @title_report.mechanics_lien_agent_name %></li>
+    <li class="list-group-item">Survey required: <%= @title_report.survey_required %></li>
+    <li class="list-group-item">Use of property: <%= @title_report.use_of_property %></li>
+    <% if @title_report.use_of_property === "Other" %>
+    <li class="list-group-item">Other use of property: <%= @title_report.use_of_property_explain %></li>
+    <% end %>
+  </h4>
+</ul>
+
+<%= link_to "Profile", profile_path(current_user), class: "btn btn-primary" %>

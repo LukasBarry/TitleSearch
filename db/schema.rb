@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160904145900) do
+ActiveRecord::Schema.define(version: 20160905203129) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -67,7 +67,10 @@ ActiveRecord::Schema.define(version: 20160904145900) do
     t.string   "right_of_way_explain"
     t.string   "mechanics_lien_agent_name"
     t.string   "use_of_property_explain"
+    t.integer  "buyer_id"
   end
+
+  add_index "title_reports", ["buyer_id"], name: "index_title_reports_on_buyer_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -96,4 +99,5 @@ ActiveRecord::Schema.define(version: 20160904145900) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
   add_foreign_key "buyers", "users"
+  add_foreign_key "title_reports", "buyers"
 end
