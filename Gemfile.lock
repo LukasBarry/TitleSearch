@@ -64,6 +64,8 @@ GEM
       activesupport (>= 3.0)
     cocaine (0.5.8)
       climate_control (>= 0.0.3, < 1.0)
+    codeclimate-test-reporter (1.0.3)
+      simplecov
     codemirror-rails (5.16.0)
       railties (>= 3.0, < 6.0)
     coderay (1.1.1)
@@ -257,6 +259,7 @@ DEPENDENCIES
   bootstrap-sass
   byebug
   capybara
+  codeclimate-test-reporter
   coffee-rails (~> 4.1.0)
   devise
   factory_girl_rails
@@ -278,4 +281,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.12.5
+   1.13.6
