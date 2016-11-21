@@ -5,9 +5,9 @@ addons:
   postgresql: '9.4'
   code_climate:
     repo_token: 765cbbb41dfea4696e222707621f2cb77464f1fe463a114eb883937317eb08b9
-script:
-  - RAILS_ENV=test bundle exec rspec spec
-before_script:
-  - cp config/database.travis.yml config/database.yml
-  - psql -c 'create database title_search' -U postgres
-  - RAILS_ENV=test bundle exec rake db:migrate --trace
+# script:
+#   - RAILS_ENV=test bundle exec rspec spec
+# before_script:
+#   - cp config/database.travis.yml config/database.yml
+#   - psql -c 'create database title_search' -U postgres
+#   - RAILS_ENV=test bundle exec rake db:migrate --trace
