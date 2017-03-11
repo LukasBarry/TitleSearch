@@ -1,4 +1,4 @@
-<%= form_for @title_report do |f| %>
+<%= simple_form_for @title_report do |f| %>
   <div class="form-group">
     <%= f.label :taxes_paid, "Taxes Paid Through:" %>
     <%= f.number_field :taxes_paid, class: "form-control", placeholder: "ex. 2016" %>
