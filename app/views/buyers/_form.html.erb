@@ -93,8 +93,8 @@
   <div class="form-group">
     <%= f.text_field :alta_endorsement, class: "form-control", placeholder: "ALTA Endorsements Requested" %>
   </div>
-  <div class="cant-see-me">
-    <%= f.number_field :user_id, value: current_user.id %>
+  <div class="form-group">
+    <%= f.hidden_field :user_id, value: current_user.id %>
   </div>
   <div class="actions">
     <%= f.submit class: "btn btn-primary btn-lg" %>
