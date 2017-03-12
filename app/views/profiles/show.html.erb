@@ -6,7 +6,6 @@
   <div class="col-md-3">
     <ul class="nav nav-pills nav-stacked">
       <li role="presentation"><%= link_to "New Buyer", new_buyer_path %></li>
-      <li role="presentation"><%= link_to "Title Report", new_title_report_path %></li>
       <li role="presentation"><%= link_to "Edit Profile", edit_user_registration_path %></li>
       <li role="presentation"><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
     </ul>
@@ -22,6 +21,7 @@
     <div class="panel-body">
       <h4><%= buyer.property_address_number %> <%= buyer.property_address_street %> <%= buyer.property_address_type %></h4>
       <h4>Seller: <%= buyer.current_owner %></h4>
+      <%= link_to 'Add Title Report', new_buyer_title_report_path(buyer), class: 'btn btn-primary' %>
     </div>
     <br />
   </div>

@@ -4,10 +4,10 @@ Rails.application.routes.draw do
   root 'profiles#landing'
 
   devise_for :users
-
-  resources :buyers
   resources :profiles
-  resources :title_reports
+  resources :buyers do
+    resources :title_reports
+  end
 
 
   # The priority is based upon order of creation: first created -> highest priority.
