@@ -7,5 +7,4 @@ class ProfilesController < ApplicationController
 
   def landing
   end
-
 end

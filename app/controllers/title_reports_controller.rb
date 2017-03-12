@@ -1,5 +1,4 @@
 class TitleReportsController < ApplicationController
-
   def new
     @title_report = TitleReport.new
   end
@@ -24,17 +23,17 @@ class TitleReportsController < ApplicationController
   def update
     @title_report = TitleReport.find(params[:id])
     @title_report.update(title_report_params)
-      if @title_report.save
-        redirect_to @title_report
-      else
-        render :edit
-      end
+    if @title_report.save
+      redirect_to @title_report
+    else
+      render :edit
+    end
   end
 
   def destroy
     @title_report = TitleReport.find(params[:id])
     @title_report.destroy
-      redirect_to profile_path(@user)
+    redirect_to profile_path(@user)
   end
 
   private
