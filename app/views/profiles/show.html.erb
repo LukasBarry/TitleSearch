@@ -17,6 +17,7 @@
   <div class="panel panel-default">
     <div class="panel-heading">
       <h3>Buyer: <%= link_to buyer.borrower, buyer_path(buyer) %></h3>
+      <%= link_to 'Edit Buyer Info', edit_buyer_path(buyer), class: 'btn btn-primary' %>
       <%= link_to 'Add Title Report', new_buyer_title_report_path(buyer), class: 'btn btn-primary' %>
     </div>
     <div class="panel-body">
