@@ -72,6 +72,17 @@
     </div>
     <br />
 
+      <h3>Title Companies</h3>
+      <div id='title_companies'>
+        <%= f.simple_fields_for :title_companies do |title_company| %>
+          <%= render 'form', f: title_company %>
+        <% end %>
+        <div class='links'>
+          <%= link_to_add_association 'Add Title Company', f, :title_companies %>
+        </div>
+      </div>
+    <br />
+
     <div class="actions">
       <%= f.submit "Update", class: "btn btn-primary btn-lg" %>
     </div>
