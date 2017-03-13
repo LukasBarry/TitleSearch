@@ -1,4 +1,5 @@
 class TitleReportsController < ApplicationController
+  before_action :set_buyer
   before_action :set_title_report, only: [:show, :edit, :update, :destroy]
 
   def new
@@ -8,7 +9,7 @@ class TitleReportsController < ApplicationController
   def create
     @title_report = @buyer.title_reports.new(title_report_params)
     if @title_report.save
-      redirect_to @title_report
+      redirect_to @buyer
     else
       render :new
     end
@@ -23,7 +24,7 @@ class TitleReportsController < ApplicationController
   def update
     @title_report.update(title_report_params)
     if @title_report.save
-      redirect_to @title_report
+      redirect_to @buyer
     else
       render :edit
     end
@@ -36,8 +37,12 @@ class TitleReportsController < ApplicationController
 
   private
 
+  def set_buyer
+    @buyer = Buyer.find(params[:buyer_id])
+  end
+
   def set_title_report
-    @title_report = TitleReport.find(params[:id])
+    @title_report = @buyer.title_reports.find(params[:id])
   end
 
   def title_report_params

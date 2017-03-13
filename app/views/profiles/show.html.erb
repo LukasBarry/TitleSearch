@@ -1,5 +1,5 @@
 <div class="page-header">
-  <h1><%= @user.company %> <small><%= @user.name.titleize %>'s Profile</small></h1>
+  <h1><%= @user.company %> <small><%= @user.name.titleize %></small></h1>
 </div>
 
 <h3>
@@ -17,11 +17,18 @@
   <div class="panel panel-default">
     <div class="panel-heading">
       <h3>Buyer: <%= link_to buyer.borrower, buyer_path(buyer) %></h3>
+      <%= link_to 'Add Title Report', new_buyer_title_report_path(buyer), class: 'btn btn-primary' %>
     </div>
     <div class="panel-body">
-      <h4><%= buyer.property_address_number %> <%= buyer.property_address_street %> <%= buyer.property_address_type %></h4>
+      <h4>Property Address: <%= buyer.property_address_number %> <%= buyer.property_address_street %> <%= buyer.property_address_type %></h4>
       <h4>Seller: <%= buyer.current_owner %></h4>
-      <%= link_to 'Add Title Report', new_buyer_title_report_path(buyer), class: 'btn btn-primary' %>
+      <% if buyer.title_reports.present? %>
+        <% buyer.title_reports.each do |title_report| %>
+          <%= link_to 'Show Title Report', buyer_title_report_path(buyer, title_report), class: 'btn btn-primary' %>
+          <%= link_to 'Edit Title Report', edit_buyer_title_report_path(buyer, title_report), class: 'btn btn-primary' %>
+          <%= link_to 'Delete Title Report', [buyer, title_report], method: :delete, class: 'btn btn-primary' %>
+        <% end %>
+      <% end %>
     </div>
     <br />
   </div>
